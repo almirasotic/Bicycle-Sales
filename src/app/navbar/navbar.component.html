@@ -1,0 +1,63 @@
+<!-- Gornji crni deo sa finansijama -->
+<div class="top-bar">
+  <p>
+    Interest Free Finance Now Available - Up to 15 months | Representative: 0% APR
+  </p>
+</div>
+
+<!-- Glavni navbar -->
+<nav class="navbar">
+  <div class="navbar-container">
+    <!-- Logo -->
+    <div class="logo">
+      <h1><a routerLink="/">BIKE <span>shop</span></a></h1>
+    </div>
+
+    <!-- Search bar -->
+    <div class="search-bar">
+      <input type="text" placeholder="Search product or brand" />
+      <button><i class="fas fa-search"></i></button>
+    </div>
+
+    <!-- Ikone sa strane -->
+    <div class="nav-icons">
+      <!-- Prikazuje se ako je korisnik prijavljen -->
+      <div *ngIf="username; else guestNav">
+        <div class="dropdown">
+          <a class="dropbtn"><i class="fas fa-user"></i> Welcome, {{ username }}</a>
+          <div class="dropdown-content">
+            <a *ngIf="isAdmin" routerLink="/add-product">Add Product</a>
+            <a (click)="logout()">Logout</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Prikazuje se ako korisnik NIJE prijavljen -->
+      <ng-template #guestNav>
+        <div class="dropdown">
+          <a class="dropbtn"><i class="fas fa-user"></i> Sign In</a>
+          <div class="dropdown-content">
+            <a routerLink="/login">Login</a>
+            <a routerLink="/register">Register</a>
+          </div>
+        </div>
+      </ng-template>
+
+      <a href="#"><i class="fas fa-map-marker-alt"></i> Stores</a>
+      <a href="#"><i class="fas fa-pound-sign"></i> £ GBP</a>
+      <a href="#"><i class="fas fa-heart"></i> Wish List</a>
+      <a href="#"><i class="fas fa-shopping-bag"></i> £0.00</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Kategorije sa linkovima ka sekcijama -->
+<!-- <div class="category-menu">
+  <a routerLink="/shop" fragment="bikes">BIKES</a>
+  <a routerLink="/shop" fragment="electric-bikes">ELECTRIC BIKES</a>
+  <a href="#">CLOTHING & HELMETS</a>
+  <a href="#">ACCESSORIES</a>
+  <a href="#">COMPONENTS</a>
+  <a href="#">MAINTENANCE</a>
+  <a href="#">SALE</a>
+</div> -->

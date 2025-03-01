@@ -1,0 +1,174 @@
+/* Gornji crni deo */
+.top-bar {
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  font-size: 14px;
+}
+
+/* Glavni navbar */
+.navbar {
+  background: white;
+  border-bottom: 1px solid #ddd;
+  padding: 15px 50px;
+}
+
+/* Kontejner koji drži logo, search bar i ikone u istom redu */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Logo */
+/* Stilizacija BIKE shop logotipa */
+.logo h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Stilizacija linka unutar logo-a */
+.logo a {
+  text-decoration: none;
+  color: #003b35;
+  transition: 0.3s;
+}
+
+/* Efekat hover-a */
+.logo a:hover {
+  color: #ffcc00;
+}
+
+/* Stilizacija reči "shop" u drugačijoj boji */
+.logo span {
+  color: black;
+  font-weight: 600;
+}
+
+
+/* Search bar */
+.search-bar {
+  display: flex;
+  align-items: center;
+  width: 40%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.search-bar button {
+  background: #003b35;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+/* Ikone sa desne strane */
+.nav-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-icons a {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.nav-icons i {
+  font-size: 16px;
+  color: #003b35;
+}
+
+/* Kategorije */
+.category-menu {
+  display: flex;
+  justify-content: center;
+  background: white;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.category-menu a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  margin: 0 15px;
+}
+
+/* Donja info sekcija */
+.info-bar {
+  display: flex;
+  justify-content: space-around;
+  background: #f8f8f8;
+  padding: 10px 0;
+  font-size: 14px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+}
+
+.info-item i {
+  margin-right: 5px;
+  color: #003b35;
+}
+/* Dropdown meni */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  min-width: 120px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Prikaz dropdowna kada korisnik pređe mišem */
+.dropdown:hover .dropdown-content {
+  display: block;
+}

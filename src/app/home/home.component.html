@@ -1,0 +1,29 @@
+<div class="container">
+  <!-- Sekcija za Bikes -->
+  <h2>Bikes</h2>
+  <div class="product-container">
+    <div class="product-grid">
+      <div *ngFor="let product of products | filterByCategory: 'Bikes'" class="product-card">
+        <img [src]="product.imageUrl" alt="{{ product.name }}">
+        <p class="product-category">BICIKLI, Trekking - touring</p>
+        <h3>{{ product.name }}</h3>
+        <p class="product-price">{{ product.price | currency:'RSD' }}</p>
+        <button class="cart-btn">Dodaj u korpu</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sekcija za Electric Bikes -->
+  <h2>Electric Bikes</h2>
+  <div class="product-container">
+    <div class="product-grid">
+      <div *ngFor="let product of products | filterByCategory: 'Electric Bikes'" class="product-card">
+        <img [src]="product.imageUrl" alt="{{ product.name }}">
+        <p class="product-category">BICIKLI, Electric</p>
+        <h3>{{ product.name }}</h3>
+        <p class="product-price">{{ product.price | currency:'RSD' }}</p>
+        <button class="cart-btn">Dodaj u korpu</button>
+      </div>
+    </div>
+  </div>
+</div>

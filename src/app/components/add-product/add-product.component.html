@@ -1,0 +1,21 @@
+<div class="add-product-container">
+  <h2>Add New Product</h2>
+  <form (submit)="onSubmit()">
+    <input type="text" placeholder="Product Name" [(ngModel)]="product.name" name="name" required />
+
+    <input type="number" placeholder="Price" [(ngModel)]="product.price" name="price" required />
+
+    <select [(ngModel)]="product.category" name="category" required>
+      <option value="" disabled selected>Select Category</option>
+      <option value="Bikes">Bikes</option>
+      <option value="Electric Bikes">Electric Bikes</option>
+    </select>
+
+    <!-- ✅ Dodato polje za opis proizvoda -->
+    <textarea placeholder="Enter product description" [(ngModel)]="product.description" name="description" required></textarea>
+
+    <input type="file" (change)="onFileSelected($event)" accept="image/*" required />
+
+    <button type="submit">Add Product</button>
+  </form>
+</div>

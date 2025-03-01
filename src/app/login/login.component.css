@@ -1,0 +1,95 @@
+/* Pozadinska slika */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url('/assets/images/bike-bg.jpg') no-repeat center center/cover;
+  position: relative;
+}
+
+/* Overlay efekat za bolju vidljivost teksta */
+.auth-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Tamni overlay */
+}
+
+/* Login/Register box */
+.auth-box {
+  position: relative;
+  background: rgba(255, 255, 255, 0.15); /* Providna bela pozadina */
+  backdrop-filter: blur(10px); /* Efekat zamagljenosti */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  text-align: center;
+  color: white; /* Beli tekst za bolji kontrast */
+}
+
+/* Naslov */
+.auth-box h2 {
+  margin-bottom: 20px;
+  color: white;
+}
+
+/* Polja za unos */
+.input-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: white;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.8);
+  color: black;
+}
+
+/* Dugme */
+.btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #ffcc00;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #ffaa00;
+}
+
+/* Link za prebacivanje između login i register */
+.redirect {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.redirect a {
+  color: #ffcc00;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.redirect a:hover {
+  text-decoration: underline;
+}

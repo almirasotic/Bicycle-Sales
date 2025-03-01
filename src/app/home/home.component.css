@@ -1,0 +1,81 @@
+.container {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+
+/* ✅ Omogućava horizontalno skrolovanje */
+.product-container {
+  overflow-x: auto; /* Horizontalni scroll */
+  white-space: nowrap; /* Sprečava prelamanje u novi red */
+  padding-bottom: 10px; /* Dodatni prostor ispod */
+}
+
+/* ✅ Proizvodi u jednom redu */
+.product-grid {
+  display: flex; /* Postavlja proizvode u red */
+  gap: 20px; /* Razmak između proizvoda */
+}
+
+/* ✅ Stilizacija kartice proizvoda */
+.product-card {
+  flex: 0 0 250px; /* Fiksna širina svake kartice */
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 15px;
+  transition: transform 0.3s ease-in-out;
+  white-space: normal; /* Omogućava prikaz teksta unutar kartice */
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+/* ✅ Stilizacija slike */
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain; /* Sprečava sečenje slike */
+  border-radius: 10px;
+}
+
+/* ✅ Kategorija proizvoda */
+.product-category {
+  font-size: 0.9em;
+  color: #777;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+/* ✅ Naziv proizvoda */
+.product-card h3 {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* ✅ Cena proizvoda */
+.product-price {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: green;
+  margin: 10px 0;
+}
+
+/* ✅ Dugme za dodavanje u korpu */
+.cart-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.cart-btn:hover {
+  background-color: darkred;
+}
